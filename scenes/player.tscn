@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://dw1fonr7ldo2o"]
+
+[ext_resource type="Script" uid="uid://ccv6c53jbsigo" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://cuwnb1c2uy5ya" path="res://scenes/projectible.tscn" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://djesaf3nq7guk" path="res://assets/sprite_sheet.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://cu7l6uvf8jliy" path="res://assets/PYelHk.png" id="3_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(235.087, 286.917)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2wvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.735, 0.735)
+script = ExtResource("1_g2els")
+projectible_scene = ExtResource("2_dqkch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.680275, -0.680293)
+scale = Vector2(0.735, 0.735)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.36055, -1.36055)
+scale = Vector2(0.481399, 0.478741)
+sprite_frames = SubResource("SpriteFrames_d2wvv")
+animation = &"idle"
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(0, -156.463)
+scale = Vector2(0.214934, 0.238776)
+texture = ExtResource("3_qhqgy")
+
+[node name="Muzzle" type="Marker2D" parent="Hand"]

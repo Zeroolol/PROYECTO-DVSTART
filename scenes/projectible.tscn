@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuwnb1c2uy5ya"]
+
+[ext_resource type="Script" uid="uid://cmuxi38y2wbn5" path="res://scripts/projectible.gd" id="1_8l8it"]
+[ext_resource type="Texture2D" uid="uid://cu7l6uvf8jliy" path="res://assets/PYelHk.png" id="1_jjox4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8l8it"]
+radius = 21.0
+
+[node name="projectible" type="Area2D"]
+script = ExtResource("1_8l8it")
+
+[node name="fuego" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.145635, 0.159)
+texture = ExtResource("1_jjox4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8l8it")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkkc826beyh8o"]
+
+[ext_resource type="Texture2D" uid="uid://d2ftv7655xc7a" path="res://assets/ExBAjxAXMAUs-7W.jpg" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cax1hfujmychi" path="res://scripts/main (2).gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dw1fonr7ldo2o" path="res://scenes/player.tscn" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bjtoc8uhuryhn" path="res://assets/d0e0f78a806585094960fbdeb9b367a0.jpg" id="2_tbgi4"]
+[ext_resource type="FontFile" uid="uid://bht63n768dkmv" path="res://assets/fonts/the-bomb-sound/The Bomb Sound.otf" id="6_o6xl0"]
+
+[sub_resource type="Curve2D" id="Curve2D_tefeu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1527.85, -75.0406, 0, 0, 0, 0, -87.2519, -75.0648, 0, 0, 0, 0, -68.573, 870.926)
+}
+point_count = 3
+
+[node name="Main" type="Node2D" groups=["enemigo"]]
+scale = Vector2(0.831231, 0.879524)
+script = ExtResource("1_tbgi4")
+fondos = Array[Texture2D]([ExtResource("2_tbgi4"), ExtResource("1_sugp2")])
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(693.55, 389.415)
+scale = Vector2(1.18479, 0.919847)
+texture = ExtResource("1_sugp2")
+
+[node name="Player" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(690.542, 401.353)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-917.284, -538.907)
+scale = Vector2(1.30529, 1.35233)
+curve = SubResource("Curve2D_tefeu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(1527.85, -75.0406)
+rotation = -3.14158
+
+[node name="contador" type="Label" parent="Player"]
+offset_left = -19.6413
+offset_top = -477.994
+offset_right = 20.3587
+offset_bottom = -393.994
+theme_override_fonts/font = ExtResource("6_o6xl0")
+theme_override_font_sizes/font_size = 106
+
+[node name="Timer2" type="Timer" parent="Player"]
+wait_time = 0.6
+autostart = true
+
+[connection signal="timeout" from="Player/Timer2" to="." method="_on_timer_timeout"]
+
+[editable path="Player"]
