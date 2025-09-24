@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1m7n2asv3lob"
+path="res://.godot/imported/DAMAGE JUGADOR.mp3-157bf63ed7cf862ca899cd513f3dd194.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/DAMAGE JUGADOR.mp3"
+dest_files=["res://.godot/imported/DAMAGE JUGADOR.mp3-157bf63ed7cf862ca899cd513f3dd194.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

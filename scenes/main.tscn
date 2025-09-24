@@ -1,0 +1,272 @@
+[gd_scene load_steps=43 format=3 uid="uid://dkkc826beyh8o"]
+
+[ext_resource type="Texture2D" uid="uid://d2ftv7655xc7a" path="res://assets/assets prueba/ExBAjxAXMAUs-7W.jpg" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cax1hfujmychi" path="res://scripts/main (2).gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dw1fonr7ldo2o" path="res://scenes/player.tscn" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bjtoc8uhuryhn" path="res://assets/assets prueba/d0e0f78a806585094960fbdeb9b367a0.jpg" id="2_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b72ouch7qo03v" path="res://assets/assets prueba/background prueba medieval.jpg" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://vkx6x0ufeds0" path="res://scenes/hand.tscn" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://j78rc4lf44cp" path="res://scenes/espada.tscn" id="5_tipki"]
+[ext_resource type="Shader" uid="uid://fdcvqgsdqq5o" path="res://scripts/main.gdshader" id="8_85g3d"]
+[ext_resource type="FontFile" uid="uid://bxh8hy3sq7v2w" path="res://assets/fonts/the-bomb-sound/The Bomb Sound Italic.otf" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://bhu44xewe78gn" path="res://scenes/puños.tscn" id="9_ya4ey"]
+[ext_resource type="AudioStream" uid="uid://cfqsfwbfvyfvr" path="res://MUSICA-SONIDOS/OST/run and shoot-gameplay.mp3" id="10_choun"]
+[ext_resource type="Texture2D" uid="uid://b8p6cvmxv5j0d" path="res://assets/PJ-Running-sprite_sheet.png" id="12_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://bcjjyi7ddruwm" path="res://assets/jugador assets/Oscilante-Pj-idle.png" id="13_muem4"]
+[ext_resource type="SpriteFrames" uid="uid://dswrrei74rel0" path="res://assets/sprite arma mafia/mafiapj.tres" id="14_a8y0u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_choun"]
+shader = ExtResource("8_85g3d")
+shader_parameter/projector_power = 0.47
+shader_parameter/vignette_param = 2.312
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ya4ey"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mlk"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ni07"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(1536, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke2ow"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(2560, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujl30"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31cv2"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf23h"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfne"]
+atlas = ExtResource("12_jbj1t")
+region = Rect2(2048, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("13_muem4")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("13_muem4")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("13_muem4")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("13_muem4")
+region = Rect2(1536, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("13_muem4")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("13_muem4")
+region = Rect2(2560, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("13_muem4")
+region = Rect2(3584, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("13_muem4")
+region = Rect2(3584, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("13_muem4")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("13_muem4")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8ls1"]
+atlas = ExtResource("13_muem4")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfm1y"]
+atlas = ExtResource("13_muem4")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fulsm"]
+atlas = ExtResource("13_muem4")
+region = Rect2(3072, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
+atlas = ExtResource("13_muem4")
+region = Rect2(3072, 512, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8y0u"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60mlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4ail")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a38lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ni07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l71n6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke2ow")
+}],
+"loop": true,
+"name": &"correr derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujl30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31cv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf23h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt7fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfne")
+}],
+"loop": true,
+"name": &"correr izquierda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}],
+"loop": true,
+"name": &"idle derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfm1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fulsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r5pv")
+}],
+"loop": true,
+"name": &"idle izquierda",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D" groups=["enemigo"]]
+scale = Vector2(0.831231, 0.879524)
+script = ExtResource("1_tbgi4")
+fondos = Array[Texture2D]([ExtResource("2_tbgi4"), ExtResource("1_sugp2"), ExtResource("4_85g3d")])
+fist_scene = ExtResource("9_ya4ey")
+hand_scene = ExtResource("4_o6xl0")
+sword_scene = ExtResource("5_tipki")
+enemigos_por_oleada = 4
+enemigos_extra_cada_oleada = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="contador" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 15.0
+offset_right = 87.0
+offset_bottom = 105.0
+grow_horizontal = 2
+scale = Vector2(1.04174, 1.03579)
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("8_tipki")
+theme_override_font_sizes/font_size = 91
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(693.55, 389.415)
+scale = Vector2(1.18479, 0.919847)
+texture = ExtResource("1_sugp2")
+
+[node name="ShaderMafia" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_choun")
+offset_left = -475.0
+offset_top = -292.0
+offset_right = 1877.0
+offset_bottom = 1078.0
+texture = SubResource("CanvasTexture_ya4ey")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_choun")
+volume_db = -3.804
+autoplay = true
+
+[node name="Player" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(659.263, 402.49)
+skins = Array[SpriteFrames]([SubResource("SpriteFrames_a8y0u"), ExtResource("14_a8y0u")])

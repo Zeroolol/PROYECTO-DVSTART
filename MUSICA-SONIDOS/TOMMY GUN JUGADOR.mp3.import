@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfhm4iwnyrna7"
+path="res://.godot/imported/TOMMY GUN JUGADOR.mp3-58134d9fa6aff9d24f6f73c09ee05cb5.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/TOMMY GUN JUGADOR.mp3"
+dest_files=["res://.godot/imported/TOMMY GUN JUGADOR.mp3-58134d9fa6aff9d24f6f73c09ee05cb5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://vkx6x0ufeds0"]
+
+[ext_resource type="Script" uid="uid://l4ip6e66hc1h" path="res://scripts/hand.gd" id="1_cmdsa"]
+[ext_resource type="Texture2D" uid="uid://d32wuk0fe4o0l" path="res://assets/sprite arma mafia/arma sin disparar.png" id="2_cmdsa"]
+
+[node name="Hand" type="Node2D" node_paths=PackedStringArray("shoot_position", "hand_sprite")]
+script = ExtResource("1_cmdsa")
+shoot_position = NodePath("ShootPosition")
+hand_sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+rotation = -0.603324
+scale = Vector2(0.131081, 0.145991)
+texture = ExtResource("2_cmdsa")
+
+[node name="ShootPosition" type="Marker2D" parent="."]

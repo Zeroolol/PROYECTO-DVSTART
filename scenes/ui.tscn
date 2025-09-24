@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://ihstxx03jimb"]
+
+[ext_resource type="Script" uid="uid://sigbb4myjdyl" path="res://scripts/ui.gd" id="1_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://bneg6wtwkaptk" path="res://assets/corazones jugador.png" id="2_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://dqilyj5cuod3j" path="res://assets/corazon daño jugador.png" id="3_gdt2y"]
+[ext_resource type="FontFile" uid="uid://bsi01wvcqmkgt" path="res://assets/fonts/the-bomb-sound/The Bomb Sound.ttf" id="4_gdt2y"]
+[ext_resource type="Shader" uid="uid://tanxm63r8gme" path="res://scripts/rachashader.gdshader" id="5_wm3ai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wm3ai"]
+shader = ExtResource("5_wm3ai")
+shader_parameter/intensity = 2.1
+shader_parameter/threshold = 0.6
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8dubc"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_x4jx1")
+heart_texture = ExtResource("2_x4jx1")
+empty_heart_texture = ExtResource("3_gdt2y")
+
+[node name="HeartContainer" type="HBoxContainer" parent="."]
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(0.745758, 0.541812)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 815.0
+offset_top = 30.0
+offset_right = 960.0
+offset_bottom = 76.0
+scale = Vector2(0.975261, 0.787471)
+theme_override_fonts/font = ExtResource("4_gdt2y")
+theme_override_font_sizes/font_size = 46
+
+[node name="StreakLabel" type="Label" parent="."]
+offset_left = 790.0
+offset_top = 86.0
+offset_right = 948.0
+offset_bottom = 142.0
+scale = Vector2(0.97526, 0.787471)
+theme_override_fonts/font = ExtResource("4_gdt2y")
+theme_override_font_sizes/font_size = 56
+
+[node name="ShaderRacha" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_wm3ai")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_8dubc")

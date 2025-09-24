@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5iobuu8ypkhh"
+path="res://.godot/imported/ESPADA JUGADOR.mp3-08a832c0f2f8a372a4873248b4b4e9e9.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/ESPADA JUGADOR.mp3"
+dest_files=["res://.godot/imported/ESPADA JUGADOR.mp3-08a832c0f2f8a372a4873248b4b4e9e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

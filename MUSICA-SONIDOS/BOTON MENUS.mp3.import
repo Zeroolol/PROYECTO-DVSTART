@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxd8mavhpyp08"
+path="res://.godot/imported/BOTON MENUS.mp3-d32b881435064806e9a94bd3e1d45703.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/BOTON MENUS.mp3"
+dest_files=["res://.godot/imported/BOTON MENUS.mp3-d32b881435064806e9a94bd3e1d45703.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

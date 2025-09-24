@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b328qxecqmyts"]
+
+[ext_resource type="Script" uid="uid://b4xesbwqhkpm7" path="res://scripts/enemy_projectile.gd" id="1_e8ik0"]
+[ext_resource type="Texture2D" uid="uid://cpmb4ppr7q5gi" path="res://assets/assets prueba/PYelHk.png" id="1_lofwd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8ik0"]
+radius = 140.824
+
+[node name="EnemyProjectile" type="Area2D"]
+modulate = Color(0.0627451, 0.866667, 0.658824, 1)
+scale = Vector2(0.134921, 0.16)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_e8ik0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lofwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e8ik0")

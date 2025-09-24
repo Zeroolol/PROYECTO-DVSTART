@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://br0mn2xj70e0c"]
+
+[ext_resource type="Script" uid="uid://dlla8dnx0hpyo" path="res://scripts/deathscreen.gd" id="1_ylnw1"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ylnw1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -163.0
+offset_right = 1413.0
+offset_bottom = 867.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 99.0
+offset_right = 752.0
+offset_bottom = 224.0
+theme_override_font_sizes/font_size = 91
+text = "PERDISTE"
+
+[node name="MENU" type="Button" parent="."]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 464.0
+offset_right = 697.0
+offset_bottom = 553.0
+text = "MENU"
+
+[node name="RETRY" type="Button" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 347.0
+offset_right = 693.0
+offset_bottom = 436.0
+text = "VOLVER AL JUEGO"
+
+[connection signal="pressed" from="MENU" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="RETRY" to="." method="_on_retry_pressed"]

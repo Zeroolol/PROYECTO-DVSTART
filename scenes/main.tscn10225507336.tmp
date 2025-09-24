@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkkc826beyh8o"]
+
+[ext_resource type="Texture2D" uid="uid://d2ftv7655xc7a" path="res://assets/assets prueba/ExBAjxAXMAUs-7W.jpg" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cax1hfujmychi" path="res://scripts/main (2).gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dw1fonr7ldo2o" path="res://scenes/player.tscn" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://bjtoc8uhuryhn" path="res://assets/assets prueba/d0e0f78a806585094960fbdeb9b367a0.jpg" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://vkx6x0ufeds0" path="res://scenes/hand.tscn" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://j78rc4lf44cp" path="res://scenes/espada.tscn" id="5_tipki"]
+[ext_resource type="Shader" uid="uid://fdcvqgsdqq5o" path="res://scripts/main.gdshader" id="8_85g3d"]
+[ext_resource type="FontFile" uid="uid://bxh8hy3sq7v2w" path="res://assets/fonts/the-bomb-sound/The Bomb Sound Italic.otf" id="8_tipki"]
+
+[sub_resource type="Curve2D" id="Curve2D_tefeu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1527.85, -75.0406, 0, 0, 0, 0, -87.2519, -75.0648, 0, 0, 0, 0, -68.573, 870.926)
+}
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_choun"]
+shader = ExtResource("8_85g3d")
+shader_parameter/projector_power = 0.47
+shader_parameter/vignette_param = 2.312
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ya4ey"]
+
+[node name="Main" type="Node2D" groups=["enemigo"]]
+scale = Vector2(0.831231, 0.879524)
+script = ExtResource("1_tbgi4")
+fondos = Array[Texture2D]([ExtResource("2_tbgi4"), ExtResource("1_sugp2")])
+hand_scene = ExtResource("4_o6xl0")
+sword_scene = ExtResource("5_tipki")
+
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(693.55, 389.415)
+scale = Vector2(1.18479, 0.919847)
+texture = ExtResource("1_sugp2")
+
+[node name="Player" parent="." instance=ExtResource("2_jyhfs")]
+position = Vector2(690.542, 401.353)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-917.284, -538.907)
+scale = Vector2(1.30529, 1.35233)
+curve = SubResource("Curve2D_tefeu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(1527.85, -75.0406)
+rotation = -3.14158
+
+[node name="Timer2" type="Timer" parent="Player"]
+wait_time = 0.6
+autostart = true
+
+[node name="contador" type="Label" parent="Player"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -99.8436
+offset_top = -502.745
+offset_right = 78.1564
+offset_bottom = -412.745
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("8_tipki")
+theme_override_font_sizes/font_size = 91
+text = "fgtr"
+
+[node name="ShaderMafia" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_choun")
+offset_left = -475.0
+offset_top = -292.0
+offset_right = 1877.0
+offset_bottom = 1078.0
+texture = SubResource("CanvasTexture_ya4ey")
+
+[connection signal="mapa_cambiado" from="." to="Player" method="_on_main_mapa_cambiado"]
+[connection signal="timeout" from="Player/Timer2" to="." method="_on_timer_timeout"]
+
+[editable path="Player"]

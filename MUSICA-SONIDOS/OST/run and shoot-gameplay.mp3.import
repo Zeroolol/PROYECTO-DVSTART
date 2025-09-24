@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfqsfwbfvyfvr"
+path="res://.godot/imported/run and shoot-gameplay.mp3-5fe1bc4a91944ef0369df4da1ea76509.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/OST/run and shoot-gameplay.mp3"
+dest_files=["res://.godot/imported/run and shoot-gameplay.mp3-5fe1bc4a91944ef0369df4da1ea76509.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

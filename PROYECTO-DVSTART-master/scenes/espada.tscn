@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://j78rc4lf44cp"]
+
+[ext_resource type="Script" uid="uid://dd5616dicgicl" path="res://scripts/Espada.gd" id="1_1xgbk"]
+[ext_resource type="Texture2D" uid="uid://bdsueugx5epiq" path="res://assets/assets prueba/WoodSword.png" id="1_c47fq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xgbk"]
+size = Vector2(54.1751, 464.294)
+
+[node name="Espada" type="Area2D"]
+script = ExtResource("1_1xgbk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -4.76837e-06)
+rotation = -1.38544e-05
+scale = Vector2(0.356131, 0.67673)
+texture = ExtResource("1_c47fq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.16835, -6.87667)
+rotation = 0.490103
+shape = SubResource("RectangleShape2D_1xgbk")
+
+[node name="AttackTimer" type="Timer" parent="."]

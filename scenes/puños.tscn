@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhu44xewe78gn"]
+
+[ext_resource type="Script" uid="uid://dlwpybkthw7y4" path="res://scripts/puños.gd" id="1_ljm47"]
+[ext_resource type="Texture2D" uid="uid://cuc1yr85cwfh4" path="res://assets/jugador assets/crosshair177.png" id="2_k4e23"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vi7no"]
+radius = 77.026
+
+[node name="puños" type="Area2D"]
+collision_mask = 7
+script = ExtResource("1_ljm47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vi7no")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_k4e23")

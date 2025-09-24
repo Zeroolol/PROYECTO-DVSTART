@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdyukg8fcm666"
+path="res://.godot/imported/CAMBIO DE MAPA EFFECTO.mp3-cb36c816007f4bb91c0c080d16d18882.mp3str"
+
+[deps]
+
+source_file="res://MUSICA-SONIDOS/CAMBIO DE MAPA EFFECTO.mp3"
+dest_files=["res://.godot/imported/CAMBIO DE MAPA EFFECTO.mp3-cb36c816007f4bb91c0c080d16d18882.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
